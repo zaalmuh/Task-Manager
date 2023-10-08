@@ -22,6 +22,12 @@ app.post('/', async (req, res) => {
   res.redirect('/');
 });
 
+app.put('/:id', async (req, res) => {
+  const { id } = req.params;
+  const tasks = await Task.findByIdAndUpdate(id, { ...req.body });
+  res.redirect('/');
+});
+
 app.delete('/:id', async (req, res) => {
   const { id } = req.params;
   await Task.findByIdAndDelete(id);

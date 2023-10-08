@@ -33,7 +33,27 @@
                 <th scope="row"><%= i+ 1%></th>
                 <td><%= task.title %></td>
                 <td>
-                  <button class="btn btn-success badge">Edit</button>
+                  <button type="button" class="btn btn-success badge" data-bs-toggle="modal" data-bs-target="#exampleModal<%= i %>">Edit</button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal<%= i %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Task</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form action="/<%= task._id %>?_method=PUT" method="POST">
+                            <div class="mb-3">
+                              <label for="title" class="form-label">Task</label>
+                              <input class="form-control" type="text" id="title" name="title" value="<%= task.title %>" required />
+                            </div>
+                            <button class="btn btn-success">Edit</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </td>
                 <td>
                   <form action="/<%= task._id %>?_method=DELETE" method="POST">

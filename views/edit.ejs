@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Form</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container form-container">
+      <h1>Edit Task Form</h1>
+      <form action="/<%= findTask._id %>?_method=PUT" method="post" class="add-form">
+        <div class="form-control">
+          <label for="title">Task Title</label>
+          <input type="text" id="title" name="title" value="<%= findTask.title %>" />
+        </div>
+        <div class="form-control">
+          <label for="deadline">Deadline</label>
+          <input type="date" id="deadline" name="deadline" min="<%= date %>" value="<%= findTask.dueDate %>" />
+        </div>
+        <div class="form-control">
+          <label for="priority">Priority</label>
+          <select name="priority" id="priority">
+            <% for( let i = 1; i <= 5; i++ ) { %> <% if (i == findTask.priority) { %>
+            <option value="<%= i %>" selected>Priority <%= i %></option>
+            <% } %>
+            <option value="<%= i %>">Priority <%= i %></option>
+            <% } %>
+          </select>
+        </div>
+        <button class="button">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

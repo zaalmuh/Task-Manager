@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Form</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container form-container">
+      <h1>Add Task Form</h1>
+      <form action="/" method="post" class="add-form">
+        <div class="form-control">
+          <label for="title">Task Title</label>
+          <input type="text" id="title" name="title" />
+        </div>
+        <div class="form-control">
+          <label for="deadline">Deadline</label>
+          <input type="date" id="deadline" name="deadline" min="<%= date %>" />
+        </div>
+        <div class="form-control">
+          <label for="priority">Priority</label>
+          <select name="priority" id="priority">
+            <option value="1">Priority 1</option>
+            <option value="2">Priority 2</option>
+            <option value="3">Priority 3</option>
+            <option value="4">Priority 4</option>
+            <option value="5">Priority 5</option>
+          </select>
+        </div>
+        <button class="button">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

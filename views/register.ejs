@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Form login -->
+      <div class="container">
+        <div class="form-container register-form">
+          <h1>Welcome to Task Manager</h1>
+          <h3>Sign Up</h3>
+          <form action="/register" method="post" class="add-form">
+            <div class="form-control">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" />
+            </div>
+            <div class="form-control">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" />
+            </div>
+            <button class="button">Sign Up</button>
+          </form>
+        </div>
+      </div>
+      <!-- Akhir form login -->
+    </main>
+    <script src="/static/script.js"></script>
+  </body>
+</html>

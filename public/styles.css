@@ -36,6 +36,10 @@ a {
   padding: 5px 5px;
 }
 
+.add-container {
+  margin-top: 1rem;
+}
+
 .container .title-container h1 {
   width: 100%;
 }
@@ -124,6 +128,10 @@ a {
   margin-right: 0.5rem;
   border-radius: 5px;
 }
+.register-form {
+  align-items: start;
+}
+
 .form-container {
   margin: auto;
   display: flex;
@@ -131,6 +139,7 @@ a {
   height: 90vh;
   padding: 100px 100px;
   justify-content: center;
+  flex-direction: column;
   align-items: start;
   background-color: #ef9748;
   border-radius: 10px;
@@ -155,6 +164,11 @@ a {
   justify-content: center;
   align-items: center;
 }
+.container h3 {
+  font-weight: bold;
+  margin-bottom: 0;
+  align-self: center;
+}
 
 input,
 select {
@@ -171,6 +185,10 @@ label {
 .new {
   text-decoration: underline;
   color: blue;
+}
+
+.logout-button {
+  background-color: rgba(251, 0, 0, 0.6);
 }
 
 :modal {
